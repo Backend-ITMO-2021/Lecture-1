@@ -15,5 +15,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: Run tests
-      run: sbt test
+    - name: Compile code
+      run: sbt compile
+    - name: Run easy tests
+      run: sbt "test:testOnly *FibEasyTest"
+    - name: Run hard tests
+      run: sbt "test:testOnly *FibHardTest"
