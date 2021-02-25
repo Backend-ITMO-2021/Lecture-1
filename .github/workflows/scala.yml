@@ -15,8 +15,7 @@ jobs:
           java-version: 11
       - name: Compile code
         run: sbt compile
-  testEasy:
-    needs: build
+  test-easy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -26,8 +25,7 @@ jobs:
           java-version: 11
       - name: Run easy tests
         run: sbt "test:testOnly *FibEasyTest"
-  testHard:
-    needs: build
+  test-hard:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
