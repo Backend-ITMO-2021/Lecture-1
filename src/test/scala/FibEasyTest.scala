@@ -1,3 +1,25 @@
+import org.scalatest.funsuite.AnyFunSuite
+import ru.itmo.backend_2021.{JavaMain, ScalaMain}
+
+class FibEasyTest extends AnyFunSuite {
+  test("JavaMain.fib") {
+    for {
+      (num, i) <- FibNumbers()
+    } yield {
+      assert(JavaMain.fib(i) == num)
+    }
+  }
+
+  test("ScalaMain.fib") {
+    for {
+      (num, i) <- FibNumbers()
+    } yield {
+      assert(ScalaMain.fib(i) == num)
+    }
+  }
+
+}
+
 object FibNumbers {
   def apply(): List[(Int, Int)] =
     List(
@@ -24,3 +46,4 @@ object FibNumbers {
       6765 -> 20
     )
 }
+
