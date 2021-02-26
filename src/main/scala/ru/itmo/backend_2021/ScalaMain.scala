@@ -7,7 +7,15 @@ object ScalaMain {
 
   def fib(n: Int): Int = {
     // Your code goes here
-    ???
+    var first = 0
+    var second = 1
+
+    for( i <- 1 to n){
+      val sum = first + second
+      first = second
+      second = sum
+    }
+    first
     // And ends there
   }
 }

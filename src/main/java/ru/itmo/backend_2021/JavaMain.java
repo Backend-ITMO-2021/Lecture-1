@@ -9,7 +9,15 @@ public class JavaMain {
 
   public static int fib(int n) {
     // Your code goes here
-    throw new NotImplementedError("");
+    int first = 0;
+    int second = 1;
+
+    for (int i = 0; i < n; i++) {
+      int sum = first + second;
+      first = second;
+      second = sum;
+    }
+    return first;
     // And ends there
   }
 }
