@@ -8,8 +8,13 @@ public class JavaMain {
   }
 
   public static int fib(int n) {
-    // Your code goes here
-    throw new NotImplementedError("");
-    // And ends there
+    if (n == 0) return 0;
+    int a = 0, s = 1;
+    for (int i = 2; i <= n; ++i) {
+      int d = a + s;
+      a = s;
+      s = d;
+    }
+    return s;
   }
 }
