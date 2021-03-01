@@ -6,8 +6,9 @@ object ScalaMain {
   }
 
   def fib(n: Int): Int = {
-    // Your code goes here
-    ???
-    // And ends there
+    @annotation.tailrec
+    def iterate(i: Int, a: Int, b: Int): Int =
+      if (i == n) a else iterate(i+1, b, a+b)
+    iterate(0, 0, 1)
   }
 }
