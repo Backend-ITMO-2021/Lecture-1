@@ -8,8 +8,14 @@ public class JavaMain {
   }
 
   public static int fib(int n) {
-    // Your code goes here
-    throw new NotImplementedError("");
-    // And ends there
+    int a = 0;
+    int b = 1;
+    while (n > 0) {
+      int c = a+b;
+      a = b;
+      b = c;
+      n--;
+    }
+    return a;
   }
 }
