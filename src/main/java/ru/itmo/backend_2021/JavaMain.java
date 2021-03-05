@@ -7,7 +7,7 @@ public class JavaMain {
     System.out.println("Hello Java");
   }
 
-  public static int fib(int n) {
+  public static long fib(int n) {
     // Your code goes here
     throw new NotImplementedError("");
     // And ends there

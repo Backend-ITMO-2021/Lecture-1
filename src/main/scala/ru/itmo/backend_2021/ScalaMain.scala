@@ -2,10 +2,10 @@ package ru.itmo.backend_2021
 
 object ScalaMain {
   def main(args: Array[String]): Unit = {
-    println("Hello Scala")
+    println(fib(80))
   }
 
-  def fib(n: Int): Int = {
+  def fib(n: Int): Long = {
     // Your code goes here
     ???
     // And ends there
