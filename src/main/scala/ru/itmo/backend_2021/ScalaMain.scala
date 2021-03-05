@@ -1,4 +1,5 @@
 package ru.itmo.backend_2021
+import scala.NotImplementedError
 
 object ScalaMain {
   def main(args: Array[String]): Unit = {
@@ -6,8 +7,9 @@ object ScalaMain {
   }
 
   def fib(n: Int): Int = {
-    // Your code goes here
-    ???
-    // And ends there
+    if (n < 0) throw new NotImplementedError("")
+    if (n == 0) 0
+    else if (n == 1) 1
+    else fib(n - 1) + fib(n - 2)
   }
 }
