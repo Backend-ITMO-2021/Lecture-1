@@ -6,8 +6,13 @@ object ScalaMain {
   }
 
   def fib(n: Int): Int = {
-    // Your code goes here
-    ???
-    // And ends there
+    var prev: Int = 0
+    var curr: Int = 1
+    for(i <- 0 until n){
+      val next = prev + curr
+      prev = curr
+      curr = next
+    }
+    return prev
   }
 }
