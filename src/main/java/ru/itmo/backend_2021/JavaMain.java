@@ -6,7 +6,6 @@ import java.math.BigInteger;
 public class JavaMain {
   public static void main(String[] args) {
     System.out.println("Hello Java");
-    System.out.println(fib(68));
   }
 
   public static BigInteger fib(int n) {
