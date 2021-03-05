@@ -7,9 +7,18 @@ object ScalaMain {
   }
 
   def fib(n: Int): Int = {
-    if (n < 0) throw new NotImplementedError("")
-    if (n == 0) 0
-    else if (n == 1) 1
-    else fib(n - 1) + fib(n - 2)
+    var prev = 0
+    var next = 1
+    var i = 0
+    while ( {
+      i < n
+    }) {
+      val temp = next
+      next = prev + next
+      prev = temp
+
+      i += 1
+    }
+    prev
   }
 }
