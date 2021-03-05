@@ -8,6 +8,21 @@ public class JavaMain {
     System.out.println("Hello Java");
   }
 
+  public static long fib(int n) {
+    long prev = 0;
+    long next = 1;
+    for (int i = 0; i < n; i++) {
+      next = prev + next;
+      prev = next - prev;
+    }
+
+    return prev;
+  }
+
+  /*
+  fib(1000000) не влезет в int и даже в long
+  (и перестанет помещаться намного раньше n=1000000)
+
   public static BigInteger fib(int n) {
     BigInteger prev = new BigInteger("0");
     BigInteger next = new BigInteger("1");
@@ -18,6 +33,7 @@ public class JavaMain {
 
     return prev;
   }
+  */
 
   /*
   public static BigInteger fibFormula(int n) {
