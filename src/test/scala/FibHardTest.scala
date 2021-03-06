@@ -10,12 +10,4 @@ class FibHardTest extends AnyFunSuite {
   test("JavaMain.fib hard test") {
     JavaMain.fib(1000000)
   }
-
-  test("ScalaMain.fib very hard test") {
-    assert(ScalaMain.fib(80) == 23416728348467685L)
-  }
-
-  test("JavaMain.fib very hard test") {
-    assert(JavaMain.fib(80) == 23416728348467685L)
-  }
 }
