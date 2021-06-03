@@ -15,7 +15,6 @@ object ScalaMain {
       prev = current - prev
 
     }
-
     return current
     // And ends there
   }
